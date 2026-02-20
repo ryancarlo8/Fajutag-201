@@ -1,0 +1,138 @@
+body {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(46, 44, 44);
+    min-height: 95vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.input-header {
+    margin-right: 20px;
+    margin-bottom: 55px;
+}
+
+.input-box {
+    order: 1;
+    display: flex;
+    grid-template-columns: 6;
+    background-color: rgb(49, 49, 54);
+    border-radius: 20px;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-btns {
+    display: grid;
+    gap: 1.5em;
+}
+
+input {
+    padding: 10px;
+    min-width: 250px;
+}  
+
+#submit {
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button {
+    width: 200px;
+    margin-left: 40px;
+}
+
+button:hover {
+    background-color: gray;
+    transform: 1.2s;
+}
+
+.output-box {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(63, 67, 66);
+    border-radius: 20px;
+    height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.table-info {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 200px   200px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(145, 176, 83);
+    border-style: dotted;
+    border-color: rgb(39, 132, 75);
+    gap: 10em;
+}
+
+.table-info button {
+    float: inline-end;
+    padding: 10px;
+    border: none;
+    background-color: #f2f4f2;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 60px;
+}
+
+button:hover{
+    transform: 2s;
+    background-color: gray;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        grid-template-columns: 1fr;
+        gap: 1em;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .input-box,
+    .output-box {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .input-header {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .input-btns {
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        min-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .table-info {
+        flex-direction: column;
+        gap: 1em;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .table-info button {
+        width: 80px;
+    }
+}

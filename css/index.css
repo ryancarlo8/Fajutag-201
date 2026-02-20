@@ -1,0 +1,161 @@
+body{
+    background-color: rgb(40, 40, 40);
+    min-height: 98vh;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "Header Header"
+    "Navigation Main"
+    "Footer Footer"
+    ;
+    color: white;
+}
+
+/** Header **/
+.header{
+    grid-area: Header;
+    text-align: center;
+    align-items: center;
+    gap: 320px;
+    display: flex;
+    color: white;
+}
+
+
+.header img{
+    float: left;
+    margin-left: 10px;
+    height: 130px;
+    width: 130px;
+    border-radius: 100px;
+}
+
+/*Navigation*/
+.navigation{
+    grid-area: Navigation;
+    background-color: rgb(37, 34, 34);
+}
+
+.nav-content {
+    text-align: center;
+    padding: auto;
+    margin: 10px;
+    text-decoration-color: black;
+}
+
+a :hover{
+      background-color: gray;
+      border-radius: 20px;
+      cursor: pointer;
+      transform: translateY() scale(0.97);
+}
+
+
+/*Text*/
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+/*Main*/
+
+.main{
+    grid-area: Main;
+    background-color: rgb(83, 75, 75);
+    text-align: center;
+}
+
+.main-content {
+    margin-left: 20px;
+    gap: 2em;
+    text-align: start;
+    justify-content: center;
+
+}
+
+.main-content h1{
+    text-align: left;
+}
+
+/*Footer*/
+.footer{
+    grid-area: Footer;
+    background-color: rgb(54, 52, 52);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    
+}
+
+.footer p {
+    font-weight: bold;
+    font-size: large;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 
+        "Header"
+        "Navigation"
+        "Main"
+        "Footer";
+    }
+
+    /* Header */
+    .header{
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .header img{
+        height: 90px;
+        width: 90px;
+        margin: 0;
+    }
+
+    /* Navigation */
+    .navigation{
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-content{
+        margin: 5px 0;
+    }
+
+    /* Main */
+    .main{
+        padding: 15px;
+    }
+
+    .main-content{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .main-content h1{
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer{
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
